@@ -8,12 +8,15 @@ const ReplyList = props => {
 
   return (
     <div className="reply-list">
-      <button
-        className="reply-button"
-        onClick={() => toggleForm(!showReplyForm)}
-      >
-        {showReplyForm ? "Close" : "Reply"}
-      </button>
+      {replies.length > 0 ? null : (
+        <button
+          className="reply-button"
+          onClick={() => toggleForm(!showReplyForm)}
+        >
+          {showReplyForm ? "Close" : "Reply"}
+        </button>
+      )}
+
       {showReplyForm && (
         <ReplyForm messageId={messageId} toggleForm={toggleForm} />
       )}

@@ -23,8 +23,8 @@ const ReplyForm = props => {
   };
 
   return (
-    <div className="form-wrapper">
-      <div className="input-wrapper">
+    <div className="form-reply">
+      <div className="input-wrapper-reply">
         <textarea
           onChange={e => setText(e.target.value)}
           placeholder="Reply text"

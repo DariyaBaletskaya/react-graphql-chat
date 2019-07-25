@@ -109,6 +109,7 @@ button {
     .reply-list {
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
 
       .reply-list-title {
         font-weight: 600;
@@ -118,7 +119,16 @@ button {
         font-size: 1rem;
       }
       .reply-button {
-        margin: 2px auto 0;
+        margin: 5px auto;
+        margin-right: -2px;
+      }
+    }
+
+    .form-reply {
+      display: flex;
+      justify-content: space-between;
+      .input-wrapper-reply {
+        margin: 0 3px;
       }
     }
   }
