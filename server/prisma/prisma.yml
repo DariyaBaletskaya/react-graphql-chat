@@ -1,0 +1,11 @@
+#endpoint: ''
+#endpoint: ''
+endpoint: https://eu1.prisma.sh/dreaming1806-d9b760/bsa-graphql-hw/dev
+
+datamodel: datamodel.prisma
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client
+hooks:
+  post-deploy:
+    - prisma generate
