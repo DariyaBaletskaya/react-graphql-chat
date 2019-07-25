@@ -20,7 +20,7 @@ const ReplyList = props => {
       {showReplyForm && (
         <ReplyForm messageId={messageId} toggleForm={toggleForm} />
       )}
-      {replies.length > 0 && <span className="reply-list-title">Replies</span>}
+      {replies.length > 0 && <span className="reply-list-title">Reply</span>}
       {replies.map(item => {
         return <ReplyItem key={item.id} {...item} />;
       })}
