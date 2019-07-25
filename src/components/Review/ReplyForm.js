@@ -33,15 +33,17 @@ const ReplyForm = props => {
           cols="25"
         />
       </div>
-      <Mutation
-        mutation={POST_REPLY_MUTATION}
-        variables={{ messageId, text }}
-        update={(store, { data: { postReply } }) => {
-          _updateStoreAfterAddingReply(store, postReply, messageId);
-        }}
-      >
-        {postMutation => <button onClick={postMutation}>Post</button>}
-      </Mutation>
+      {text === "" ? null : (
+        <Mutation
+          mutation={POST_REPLY_MUTATION}
+          variables={{ messageId, text }}
+          update={(store, { data: { postReply } }) => {
+            _updateStoreAfterAddingReply(store, postReply, messageId);
+          }}
+        >
+          {postMutation => <button onClick={postMutation}>Post</button>}
+        </Mutation>
+      )}
     </div>
   );
 };
